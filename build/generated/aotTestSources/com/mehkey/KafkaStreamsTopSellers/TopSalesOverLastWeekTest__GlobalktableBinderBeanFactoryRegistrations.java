@@ -1,0 +1,42 @@
+package com.mehkey.KafkaStreamsTopSellers;
+
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.boot.context.properties.BoundConfigurationProperties__GlobalktableBinderBeanDefinitions;
+import org.springframework.boot.context.properties.ConfigurationPropertiesBinder__GlobalktableBinderBeanDefinitions;
+import org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor__GlobalktableBinderBeanDefinitions;
+import org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter__GlobalktableBinderBeanDefinitions;
+import org.springframework.cloud.stream.binder.kafka.streams.GlobalKTableBinderConfiguration__GlobalktableBinderBeanDefinitions;
+import org.springframework.cloud.stream.binder.kafka.streams.KafkaStreamsJaasConfiguration__GlobalktableBinderBeanDefinitions;
+import org.springframework.cloud.stream.binder.kafka.streams.MultiBinderPropertiesConfiguration__GlobalktableBinderBeanDefinitions;
+import org.springframework.context.event.DefaultEventListenerFactory__GlobalktableBinderBeanDefinitions;
+import org.springframework.context.event.EventListenerMethodProcessor__GlobalktableBinderBeanDefinitions;
+
+/**
+ * Register bean definitions for the bean factory.
+ */
+public class TopSalesOverLastWeekTest__GlobalktableBinderBeanFactoryRegistrations {
+  /**
+   * Register the bean definitions.
+   */
+  public void registerBeanDefinitions(DefaultListableBeanFactory beanFactory) {
+    beanFactory.registerBeanDefinition("org.springframework.context.event.internalEventListenerProcessor", EventListenerMethodProcessor__GlobalktableBinderBeanDefinitions.getInternalEventListenerProcessorBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.context.event.internalEventListenerFactory", DefaultEventListenerFactory__GlobalktableBinderBeanDefinitions.getInternalEventListenerFactoryBeanDefinition());
+    beanFactory.registerBeanDefinition("globalKTableBinderConfiguration", GlobalKTableBinderConfiguration__GlobalktableBinderBeanDefinitions.getGlobalKTableBinderConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.cloud.stream.binder.kafka.streams.MultiBinderPropertiesConfiguration", MultiBinderPropertiesConfiguration__GlobalktableBinderBeanDefinitions.getMultiBinderPropertiesConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.cloud.stream.binder.kafka.streams.KafkaStreamsJaasConfiguration", KafkaStreamsJaasConfiguration__GlobalktableBinderBeanDefinitions.getKafkaStreamsJaasConfigurationBeanDefinition());
+    beanFactory.registerBeanDefinition("jaasInitializer", KafkaStreamsJaasConfiguration__GlobalktableBinderBeanDefinitions.getJaasInitializerBeanDefinition());
+    beanFactory.registerBeanDefinition("provisioningProvider", GlobalKTableBinderConfiguration__GlobalktableBinderBeanDefinitions.getProvisioningProviderBeanDefinition());
+    beanFactory.registerBeanDefinition("GlobalKTableBinder", GlobalKTableBinderConfiguration__GlobalktableBinderBeanDefinitions.getGlobalKTableBinderBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor", ConfigurationPropertiesBindingPostProcessor__GlobalktableBinderBeanDefinitions.getConfigurationPropertiesBindingPostProcessorBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.internalConfigurationPropertiesBinderFactory", ConfigurationPropertiesBinder__GlobalktableBinderBeanDefinitions.Factory__BeanDefinitions.getInternalConfigurationPropertiesBinderFactoryBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.internalConfigurationPropertiesBinder", ConfigurationPropertiesBinder__GlobalktableBinderBeanDefinitions.getInternalConfigurationPropertiesBinderBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.properties.BoundConfigurationProperties", BoundConfigurationProperties__GlobalktableBinderBeanDefinitions.getBoundConfigurationPropertiesBeanDefinition());
+    beanFactory.registerBeanDefinition("org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter", MethodValidationExcludeFilter__GlobalktableBinderBeanDefinitions.getMethodValidationExcludeFilterBeanDefinition());
+  }
+
+  /**
+   * Register the aliases.
+   */
+  public void registerAliases(DefaultListableBeanFactory beanFactory) {
+  }
+}

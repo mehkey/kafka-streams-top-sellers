@@ -1,0 +1,1 @@
+[engine:junit-jupiter]/[class:com.mehkey.KafkaStreamsTopSellers.TopSalesOverLastWeekTest]/[method:testTopSalesOverLastWeek()]
