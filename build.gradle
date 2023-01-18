@@ -10,6 +10,11 @@ group = 'com.mehkey'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
+jar {
+    baseName = 'KafkaStreamsTopSellers'
+    version =  '0.0.1-SNAPSHOT'
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
