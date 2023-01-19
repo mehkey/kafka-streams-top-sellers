@@ -96,7 +96,8 @@ import java.util.Properties;
 public class KafkaStreamsTopSellersApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(KafkaStreamsTopSellersApplication.class, args);
+		SpringApplication.run(KafkaStreamsTopSellersApplication.class, args);
+		/*
 		Properties config = new Properties();
 		config.put(StreamsConfig.APPLICATION_ID_CONFIG, "top-sales-stream");
 		config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
@@ -125,6 +126,7 @@ public class KafkaStreamsTopSellersApplication {
 		Topology topology = builder.build();
 		KafkaStreams streams = new KafkaStreams(topology, config);
 		streams.start();
+		*/
 	}
 
 }
