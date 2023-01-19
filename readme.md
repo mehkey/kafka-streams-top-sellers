@@ -1,5 +1,6 @@
 # Kafka Streams Top Sellers
 
+[![Java CI with Gradle](https://github.com/mehkey/kafka-streams-top-sellers/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/mehkey/kafka-streams-top-sellers/actions/workflows/gradle-build.yml)
 
 ```
 
