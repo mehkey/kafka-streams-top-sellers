@@ -38,16 +38,20 @@ Docker and Docker Compose
 ## Set Up
 Build the project:
 > gradle build
+
 Start the test environment using Docker Compose:
 > docker-compose up
+
 This will start a Kafka broker and the Kafka Streams application.
 
 Produce some sale records:
 > gradle run -Pargs="--producer"
+
 This will produce new sale records every 3 seconds for a random category out of 100 categories.
 
 Check the top sales:
 > gradle run -Pargs="--consumer"
+
 This will start a consumer that will check if the top-sales-over-last-week topic has the right values after 1 minute.
 
 ## Clean Up
