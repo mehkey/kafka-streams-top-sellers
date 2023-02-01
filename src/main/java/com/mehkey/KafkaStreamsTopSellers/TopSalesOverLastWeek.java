@@ -28,15 +28,6 @@ public class TopSalesOverLastWeek {
         // Set up the input stream and consume the records from the input topic
         KStream<String, Sale> salesStream = builder.stream(inputTopic, Consumed.with(Serdes.String(), new SaleSerde()));
 
-        // Group the records by product category
-        //KStream<String, Sale> salesByCategoryStream = salesStream.groupBy((key, value) -> value.getCategory(), Grouped.with(Serdes.String(), new SaleSerde()));
-
-        /*// Calculate the total sales for each product category
-        KStream<String, Sale> totalSalesByCategoryStream = salesByCategoryStream.reduce(
-                (aggValue, newValue) -> new Sale(newValue.getCategory(), aggValue.getTotalSales() + newValue.getTotalSales()),
-                (aggValue, oldValue) -> new Sale(oldValue.getCategory(), aggValue.getTotalSales() - oldValue.getTotalSales())
-        );
-*/
 
         KGroupedStream<String, Sale> salesByCategoryStream = salesStream.groupBy((key, value) -> value.getCategory(), Grouped.with(Serdes.String(), new SaleSerde()));
 
